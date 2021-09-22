@@ -1,20 +1,30 @@
 <?php
 class Doctor{
-    //специализация, опыт, нервы
-    public $specialization, $experience,$nerves;
+    //свойства
+    private $specialization,$nerves;//специализация, нервы
 
-    //конструктор
-    public function __construct( $specialization, $experience,$nerves)
+    //метод
+    public function heal(){
+        /**лечить*/
+    }
+    //setValues заменили на конструктор
+    public function __construct( $specialization, $nerves)
     {
-        $this->experience = $experience;
         $this->nerves = $nerves;
         $this->specialization = $specialization;
     }
 
-    //лечить
-    public function heal(){
-
+    //геттеры
+    public function getNerves()
+    {
+        return $this->nerves;
+    }
+    public function getSpecialization()
+    {
+        return $this->specialization;
     }
 }
-$bestDoctor = new Doctor('стоматолог',10,'железные');
+$bestDoctor = new Doctor('стоматолог','железные');
+echo 'Специализация: '.$bestDoctor->getSpecialization().'<br>';
+echo 'Нервы: '.$bestDoctor->getNerves().'<br>';
 $bestDoctor->heal();
