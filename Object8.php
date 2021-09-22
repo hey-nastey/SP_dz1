@@ -2,7 +2,7 @@
 //Акустическая система
 class SpeakerSystem{
     //свойства
-    public $columns, $material;//кол-во колонок, материал
+    private $columns, $material;//кол-во колонок, материал
 
     //метод класса
     public function playback(){
