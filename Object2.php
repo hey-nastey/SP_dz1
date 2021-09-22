@@ -1,29 +1,33 @@
 <?php
 //рюкзак
 class backpack{
-    //Замок, Ручки
-    private $lock, $handle;
+    //атрибуты или свойства
+    private $lock, $handle;//Замок, Ручки
 
-    //возвращение полееей
-    public function getHandle()
-    {
-        return $this->handle;
+    //метод класса
+    public function storage(){//действие хранения
+        echo 'я пуст внутри :(';
     }
+
+    //все сеттеры в этом способе объединим
+    public function setValue($handle,$lock)
+    {
+        $this->handle = $handle;
+        $this->lock = $lock;
+    }
+
+    //оставляем геттеры
     public function getLock()
     {
         return $this->lock;
     }
-
-    //конструктор
-    public function __construct($lock, $handle){
-        $this->lock = $lock;
-        $this->handle = $handle;
-    }
-
-    //действие хранения
-    public function storage(){
-        echo 'я пуст внутри';
+    public function getHandle()
+    {
+        return $this->handle;
     }
 }
-$myBackpack = new backpack('кодовый_замок','широкие');
+$myBackpack = new backpack();
+$myBackpack->setValue('кодовый','широкие');
+echo 'Замок: '.$myBackpack->getHandle().'<br>';
+echo 'Ручки: '.$myBackpack->getLock().'<br>';
 $myBackpack-> storage();
