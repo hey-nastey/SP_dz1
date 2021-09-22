@@ -1,7 +1,7 @@
 //бобёр
 class beaver{
     //свойства
-    public $tail, $teeth, $paws;//хвост, зубки, лапки
+    private $tail, $teeth, $paws;//хвост, зубки, лапки
 
     //метод класса
     public function buildDam(){
