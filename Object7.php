@@ -1,20 +1,36 @@
-<?php
 //бобёр
 class beaver{
-    //хвост, зубки, лапки
-    public $tail, $teeth, $paws;
+    //свойства
+    public $tail, $teeth, $paws;//хвост, зубки, лапки
 
-    public function __construct($tail, $teeth, $paws){
-        $this->paws=$paws;
-        $this->tail=$tail;
-        $this->teeth=$teeth;
-    }
-
+    //метод класса
     public function buildDam(){
         /**
          * строить плотину
          */
     }
+    public function __construct($tail = 'длинный', $teeth = 'крепкие', $paws = 'короткие'){
+    $this->paws=$paws;
+    $this->tail=$tail;
+    $this->teeth=$teeth;
+    }
+
+    public function getPaws()
+    {
+        return $this->paws;
+    }
+    public function getTail()
+    {
+        return $this->tail;
+    }
+    public function getTeeth()
+    {
+        return $this->teeth;
+    }
+
 }
-$myBeaver = new beaver();
-$myBeaver->buildDam();
+$bestBeaver = new beaver();
+echo 'Хвост: '.$bestBeaver->getTail().'<br>';
+echo 'Зубки: '.$bestBeaver->getTeeth().'<br>';
+echo 'Лапки: '.$bestBeaver->getPaws();
+$bestBeaver->buildDam();
