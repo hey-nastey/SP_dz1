@@ -1,8 +1,12 @@
-<?php
 //Кофемашина
 class CoffeeMachine{
-    //производитель, объем, мощность
-    public $manufacturer, $volume, $power;
+    //свойства
+    private $manufacturer, $volume, $power;//производитель, объем, мощность
+
+    //метод класса
+    public function makingCoffee(){//варить кофе
+        echo '&#9749';
+    }
 
     //конструктор
     public function __construct($manufacturer, $volume,$power){
@@ -11,10 +15,20 @@ class CoffeeMachine{
         $this->power = $power;
     }
 
-    //варить кофе
-    public function makingCoffee(){
-        echo '&#9749';
+    //геттеры
+    public function getManufacturer()
+    {
+        return $this->manufacturer;
+    }
+    public function getPower()
+    {
+        return $this->power;
+    }
+    public function getVolume()
+    {
+        return $this->volume;
     }
 }
 $CoffeeMachine1 = new CoffeeMachine('Philips',1000,2500);
+echo 'Кофемашина '.$CoffeeMachine1->getManufacturer().' c объемом '.$CoffeeMachine1->getVolume().' и мощностью '.$CoffeeMachine1->getPower().'<br>';
 $CoffeeMachine1->makingCoffee();
