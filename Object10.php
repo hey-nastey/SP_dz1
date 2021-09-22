@@ -1,24 +1,36 @@
 <?php
 //ураааа десятый это буду я...
 class I{
-    //физическое состояние, моральное состояние
-    public $physical_condition, $moral_condition;
+    //мои свойства
+    public $physical_condition, $moral_condition;//физическое состояние, моральное состояние
 
+    //мои методы
+    public function sleep(){//cон
+        echo 'я не высыпаюсь...&#128564</br>';
+    }
+    public function work(){//выполнение каких-либо дел
+        echo 'who is work?';
+    }
+
+    //мой конструктор
     public function __construct($physical_condition, $moral_condition){
         $this->moral_condition = $moral_condition;
         $this->physical_condition = $physical_condition;
     }
 
-    //cон
-    public function sleep(){
-        echo 'я не высыпаюсь...&#128564</br>';
+    //мои геттеры
+    public function getMoralCondition()
+    {
+        return $this->moral_condition;
+    }
+    public function getPhysicalCondition()
+    {
+        return $this->physical_condition;
     }
 
-    //выполнение каких-либо дел
-    public function work(){
-        echo 'who is work?';
-    }
 }
-$me = new I('2/5','-321654/5');
+$me = new I('0/5','-329745764381654/5');
+echo 'физическое состояние: '.$me->getPhysicalCondition().'<br>';
+echo 'моральное состояние: '.$me->getMoralCondition().'<br>';
 $me->sleep();
 $me->work();
