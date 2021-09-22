@@ -2,7 +2,7 @@
 //ураааа десятый это буду я...
 class I{
     //мои свойства
-    public $physical_condition, $moral_condition;//физическое состояние, моральное состояние
+    private $physical_condition, $moral_condition;//физическое состояние, моральное состояние
 
     //мои методы
     public function sleep(){//cон
